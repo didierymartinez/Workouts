@@ -1,0 +1,72 @@
+body{
+    background-color: #F1F1F1;
+    padding: 30px;
+}
+
+li.sesion {
+    display: flex;
+    flex-flow: row nowrap;
+    margin-bottom: 50px;
+    color: #666666;
+}
+.sesion-name, .today {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+li.lap {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.hourlap{
+    margin-right: 10px;
+    min-width: 80px;
+}
+
+.lap p {
+    margin: 0;
+}
+
+.laps-list{
+    margin-left: 20px;
+}
+
+.newLap {
+    min-width: 80%;
+    height: 100px;
+    outline: none;
+    border: 0;
+}
+
+button.addSession{
+    cursor: pointer;
+    display: block;
+    background-color: #54AEBB;
+    outline: none;
+    border: 0;
+    padding: 10px;
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+    border-radius: 4px;
+    margin: 20px 0;
+}
+
+.sesion-horas {
+    font-size: 12px;
+    width: 125px;
+    display: flex;
+    justify-content: space-between;
+    margin: 8px 0;
+}
+
+.sesion-totaltime{
+    font-size: 13px;
+    margin-left: 5px;
+}
+
+.sesion-horas span:first-child::after {
+    content: "-";
+    margin-left: 5px;
+}
