@@ -8,7 +8,6 @@ const Lap = (props) => {
             <p>{props.resume}</p>
         </li>
     );
-
 }
 
 export default Lap;

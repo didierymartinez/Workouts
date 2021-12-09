@@ -9,7 +9,7 @@ const Sesion = ({ name, start, end, laps }) => {
 
     return (
         <li className="sesion">
-            <section>
+            <section className="session-description">
                 <span className="sesion-name">{name}</span>
                 <span className="sesion-totaltime">{minutes > 0 && `${minutes} Min`} </span>
                 <section className="sesion-horas">
@@ -17,7 +17,7 @@ const Sesion = ({ name, start, end, laps }) => {
                     <Hour date={end}></Hour>
                 </section>
             </section>
-            <LapsList laps={laps}></LapsList>
+            <LapsList finished={!end} laps={laps}></LapsList>
         </li>
     );
 

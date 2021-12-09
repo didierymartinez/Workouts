@@ -1,14 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
+import ActivitiesContext from '../store/activities-context'
 
-const NewLap = (props) => {
+const NewLap = () => {
+    
+    const { addLap } = useContext(ActivitiesContext);
 
     const addlap = (e) => {
         if (e.ctrlKey && e.key === 'Enter') {
-            const newLap = {
-                start: new Date(),
-                resume: e.target.value
-            }
-            props.onAddLap(newLap);
+            addLap({ start: new Date(), resume: e.target.value });
             e.target.value = '';
             e.preventDefault();
         }

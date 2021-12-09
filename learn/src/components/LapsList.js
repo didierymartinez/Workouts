@@ -1,8 +1,11 @@
 import React from "react";
 import Lap from "./Lap"
+import NewLap from "./NewLap"
 
-const LapsList = ({ laps }) => {
+const LapsList = ({ finished, laps }) => {
     return (
+        <section className="session-laps">
+            { finished && <NewLap></NewLap> }
             <ul>
                 {laps.map((lap, index) => {
                     return <Lap
@@ -12,6 +15,7 @@ const LapsList = ({ laps }) => {
                     ></Lap>
                 })}
             </ul>
+        </section>
     );
 
 }

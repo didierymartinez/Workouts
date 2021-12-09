@@ -3,10 +3,15 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { ActivitiesContextProvider } from './store/activities-context'
+
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ActivitiesContextProvider>
+      <App />
+    </ActivitiesContextProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

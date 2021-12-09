@@ -9,7 +9,9 @@ const Today = (props) => {
   let year = date.getFullYear()
 
   return (
+    <>
     <span className="today">{day} {month} {year}</span>
+    </>
   );
 }
 
