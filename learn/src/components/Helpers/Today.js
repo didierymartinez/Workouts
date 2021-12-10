@@ -10,7 +10,7 @@ const Today = ({value}) => {
 
   return (
     <>
-    <span className="today">{day} {month} {year}</span>
+      <span className="today">{day} {month} {year}</span>
     </>
   );
 }

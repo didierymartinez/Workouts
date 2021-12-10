@@ -1,11 +1,20 @@
 .SelectorDay{
-    color: #666666;
+    display: flex;
+    align-items: center;
+
 }
 
 .SelectorDay button{
     border: 0;
     font-size: 20px;
-    color: #666666;
     cursor: pointer;
     background-color: transparent;
+    display: flex;
+    padding: 5px;
+}
+
+.SelectorDay span {
+    margin: 0 10px;
+    width: 180px;
+    text-align: center;
 }

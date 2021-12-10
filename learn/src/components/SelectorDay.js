@@ -3,6 +3,7 @@ import ActivitiesContext from "../store/activities-context"
 import Today from "./Helpers/Today"
 
 import "./SelectorDay.css"
+import Arrow from "./UI/Arrow";
 
 
 const SelectorDay = () => {
@@ -11,9 +12,9 @@ const SelectorDay = () => {
 
     return (
         <section className="SelectorDay">
-            <button onClick={prevDay}>&#60;</button>
+            <button onClick={prevDay}><Arrow left={true}></Arrow></button>
             <Today value={currentDay}></Today>
-            <button onClick={nextDay}>&#62;</button>
+            <button onClick={nextDay}><Arrow></Arrow></button>
         </section>
     );
 }

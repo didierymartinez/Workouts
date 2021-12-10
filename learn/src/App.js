@@ -13,13 +13,17 @@ function App() {
 
   return (
     <>
-      <SelectorDay></SelectorDay>
+      <header>
 
-      {ctx.sesionsList[0] && !ctx.sesionsList[0].end ?
-        <button className="addSession" onClick={ctx.endSession} >Terminar sesión de estudio</button>
-        :
-        <button className="addSession" onClick={ctx.addSession} >Iniciar sesión de estudio</button>
-      }
+        <SelectorDay></SelectorDay>
+
+        {ctx.sesionsList[0] && !ctx.sesionsList[0].end ?
+          <button className="addSession" onClick={ctx.endSession} >Terminar sesión de estudio</button>
+          :
+          <button className="addSession" onClick={ctx.addSession} >Iniciar sesión de estudio</button>
+        }
+        
+      </header>
 
 
       <SesionList

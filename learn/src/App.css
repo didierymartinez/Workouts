@@ -1,95 +1,136 @@
-:root{
-    --back: #202124; 
-     /* --back: #F1F1F1;  */
+:root {
+  --dark: #21222c;
 }
 
-body{
-    background-color: var(--back);
-    padding: 30px;
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: var(--dark);
+  color: white;
 }
 
 li.sesion {
-    display: flex;
-    flex-flow: row nowrap;
-    margin-bottom: 50px;
-    color: #666666;
+  display: flex;
+  flex-flow: row nowrap;
+  margin-bottom: 50px;
+  color: #666666;
 }
-.sesion-name, .today {
-    font-size: 20px;
-    font-weight: 600;
+.sesion-name {
+  font-size: 25px;
+  font-weight: 500;
+  color: #62a9cd;
 }
-
+.today {
+  font-size: 20px;
+  font-weight: 600;
+}
 li.lap {
-    display: flex;
-    margin-bottom: 15px;
+  display: flex;
+  margin-bottom: 15px;
 }
 
-.hourlap{
-    margin-right: 10px;
-    min-width: 80px;
+.hourlap {
+  margin-right: 10px;
+  min-width: 80px;
+  display: block;
+  margin-bottom: 5px;
+  color: #62a9cd;
 }
 
 .lap p {
-    margin: 0;
+  margin: 0;
+  background-color: #f3f9fb;
+  padding: 10px;
+  min-height: 50px;
+  flex: 1;
+  overflow: auto;
+  max-height: 50px;
+  font-size: 13px;
 }
 
-.laps-list{
-    margin-left: 20px;
+.laps-list {
+  margin-left: 20px;
 }
 
 .newLap {
-    min-width: 80%;
-    height: 50px;
-    outline: none;
-    border: 0;
-    margin-bottom: 10px;
-    padding: 10px;
+  min-width: 80%;
+  height: 50px;
+  outline: none;
+  border: solid 1px #62a9cd;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  padding: 10px;
 }
 
-button.addSession{
-    cursor: pointer;
-    display: block;
-    background-color: #54AEBB;
-    outline: none;
-    border: 0;
-    padding: 10px;
-    color: white;
-    font-size: 15px;
-    font-weight: 700;
-    border-radius: 4px;
-    margin: 20px 0;
+button.addSession {
+  cursor: pointer;
+  display: block;
+  background-color: #54aebb;
+  outline: none;
+  border: 0;
+  padding: 10px;
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+  border-radius: 4px;
+  margin: 20px 0;
 }
 
 .sesion-horas {
-    font-size: 12px;
-    width: 125px;
-    display: flex;
-    justify-content: space-between;
-    margin: 8px 0;
+  font-size: 12px;
+  width: 125px;
+  display: inline;
+  margin-left: 15px;
 }
 
-.sesion-totaltime{
-    font-size: 13px;
-    margin-left: 5px;
+.sesion-totaltime {
+  font-size: 16px;
+  margin: 10px 0;
+  display: block;
 }
 
 .sesion-horas span:first-child::after {
-    content: "-";
-    margin-left: 5px;
+  content: "-";
+  margin-left: 5px;
 }
 
-.session-description{
-    min-width: 150px;
-    max-width: 150px;
+.session-description {
+  min-width: 180px;
+  max-width: 180px;
+  border-right: solid 3px #d8d8d8;
 }
 
-.session-laps ul{
-    padding: 0;
+ul.sesionList {
+  padding-left: 15px;
+}
+
+.session-laps ul {
+  padding: 0;
 }
 
 section.session-laps {
-    flex: 1 1 auto;
-    display: flex;
-    flex-flow: column nowrap;
-    padding: 0 20px;
+  flex: 1 1 auto;
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 0 20px;
+}
+
+.newLapContainer {
+  display: flex;
+  flex-flow: column;
+  position: relative;
+}
+
+.newLapContainer button {
+  width: 30px;
+  height: 30px;
+  border: 0;
+  border-radius: 50%;
+  position: absolute;
+  right: -10px;
+  bottom: 0;
+  background-color: #d1d563;
+  font-size: 25px;
+  cursor: pointer;
 }

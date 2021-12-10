@@ -1,21 +1,30 @@
-import React, { useContext } from "react";
-import ActivitiesContext from '../store/activities-context'
+import React, { useContext, useRef } from "react";
+import ActivitiesContext from "../store/activities-context";
 
 const NewLap = () => {
-    
-    const { addLap } = useContext(ActivitiesContext);
+  const { addLap } = useContext(ActivitiesContext);
+  const inputTxt = useRef();
 
-    const addlap = (e) => {
-        if (e.ctrlKey && e.key === 'Enter') {
-            addLap({ start: new Date(), resume: e.target.value });
-            e.target.value = '';
-            e.preventDefault();
-        }
+  const saveLap = (e) => {
+    e.preventDefault();
+    if (inputTxt.current.value) {
+      addLap({ start: new Date(), resume: inputTxt.current.value });
+      inputTxt.current.value = "";
     }
+  };
 
-    return (
-        <textarea className="newLap" onKeyDown={addlap}></textarea>
-    );
-}
+  const addlap = (e) => {
+    if (e.ctrlKey && e.key === "Enter") {
+      saveLap(e);
+    }
+  };
+
+  return (
+    <section className="newLapContainer">
+      <textarea ref={inputTxt} className="newLap" onKeyDown={addlap}></textarea>
+      <button onClick={saveLap}>+</button>
+    </section>
+  );
+};
 
 export default NewLap;
