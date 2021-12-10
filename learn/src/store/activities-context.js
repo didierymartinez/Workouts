@@ -4,21 +4,33 @@ const ActivitiesContext = React.createContext({
     sesionsList: [],
     addSession: () => {},
     endSession: () => {},
-    addLap: () => {}
+    addLap: () => {},
+    nextDay: () => {},
+    prevDay: () => {}
 });
 
+const TZ_OFFSET = (new Date()).getTimezoneOffset() * 60000;
 
-const tzoffset = (new Date()).getTimezoneOffset() * 60000;
-const localISOTime = (new Date(Date.now() - tzoffset)).toISOString().slice(0, -1);
-const date = localISOTime.split('T')[0].replaceAll('-', '');
-const KEY_LOCASTORAGE = 'activities_' + date
+const stringDate = (date) => {
+  return (new Date(date - TZ_OFFSET)).toISOString().split('T')[0];
+}
+
+const addDay = (date, n) => {
+  const nD = new Date(date+':');
+  nD.setDate(nD.getDate() + n);
+  return stringDate(nD); 
+}
+
+
+const DEFAULT_KEY_LOCASTORAGE = stringDate(Date.now())
 
 export const ActivitiesContextProvider = (props) => {
 
     const [sesionsList, setSesionsList] = useState([]);
+    const [keyLocalStorage, setKeyLocalStorage ] = useState(DEFAULT_KEY_LOCASTORAGE);
     
     useEffect(() => {
-        const sesions = JSON.parse(localStorage.getItem(KEY_LOCASTORAGE)) || [];
+        const sesions = JSON.parse(localStorage.getItem(keyLocalStorage)) || [];
         setSesionsList(sesions);
     }, [])
 
@@ -26,9 +38,22 @@ export const ActivitiesContextProvider = (props) => {
       if (sesionsList.length === 0) {
         return
       }
-      localStorage.setItem(KEY_LOCASTORAGE, JSON.stringify(sesionsList))
+      localStorage.setItem(keyLocalStorage, JSON.stringify(sesionsList))
     }, [sesionsList])
-  
+
+    useEffect(() => {
+      const sesions = JSON.parse(localStorage.getItem(keyLocalStorage)) || [];
+      setSesionsList(sesions);
+    },[keyLocalStorage])
+
+    const nextDay = () => {
+      setKeyLocalStorage( addDay(keyLocalStorage, 1) )
+    }
+    
+    const prevDay = () => {
+      setKeyLocalStorage( addDay(keyLocalStorage, -1) )
+    }
+
     const addSession = () => {
   
       setSesionsList((prev) => {
@@ -48,7 +73,7 @@ export const ActivitiesContextProvider = (props) => {
           newMod[0].start = new Date().toISOString();
           newMod[0].end = undefined;
         } else {
-          newMod[0].end = new Date().toISOString();
+          newMod[0].end = newMod[0].laps[0].start;
         }
         return newMod;
       })
@@ -67,7 +92,10 @@ export const ActivitiesContextProvider = (props) => {
             sesionsList,
             addSession,
             endSession,
-            addLap
+            addLap,
+            nextDay,
+            prevDay,
+            currentDay: keyLocalStorage
         }}> {props.children} </ActivitiesContext.Provider>
     );
 }

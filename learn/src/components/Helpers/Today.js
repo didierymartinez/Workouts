@@ -1,8 +1,8 @@
 import React from "react";
 
-const Today = (props) => {
+const Today = ({value}) => {
 
-  let date = new Date()
+  let date = value ? new Date(value + ':') :new Date()
 
   let day = date.getDate()
   let month = date.toLocaleDateString('en-US', { month: 'long' })

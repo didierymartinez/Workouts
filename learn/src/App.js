@@ -1,7 +1,8 @@
 import React, { useContext } from "react"
 import SesionList from "./components/SesionsList"
-import Today from "./components/Helpers/Today"
 import ActivitiesContext from './store/activities-context'
+import SelectorDay from "./components/SelectorDay"
+
 
 import "./App.css"
 
@@ -12,7 +13,7 @@ function App() {
 
   return (
     <>
-      <Today></Today>
+      <SelectorDay></SelectorDay>
 
       {ctx.sesionsList[0] && !ctx.sesionsList[0].end ?
         <button className="addSession" onClick={ctx.endSession} >Terminar sesión de estudio</button>

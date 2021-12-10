@@ -1,5 +1,10 @@
+:root{
+    --back: #202124; 
+     /* --back: #F1F1F1;  */
+}
+
 body{
-    background-color: #F1F1F1;
+    background-color: var(--back);
     padding: 30px;
 }
 

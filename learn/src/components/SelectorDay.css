@@ -1,0 +1,11 @@
+.SelectorDay{
+    color: #666666;
+}
+
+.SelectorDay button{
+    border: 0;
+    font-size: 20px;
+    color: #666666;
+    cursor: pointer;
+    background-color: transparent;
+}
