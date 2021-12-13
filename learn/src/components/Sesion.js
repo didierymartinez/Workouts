@@ -10,7 +10,7 @@ const Sesion = ({ name, start, end, laps }) => {
     return (
         <li className="sesion">
             <section className="session-description">
-                <span className="sesion-name">{name}</span>
+                <span className={`sesion-name ${ (!end) && "active"}`}>{name}</span>
                 <section className="sesion-horas">
                     <Hour date={start}></Hour>
                     <Hour date={end}></Hour>

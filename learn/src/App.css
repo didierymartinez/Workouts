@@ -1,26 +1,44 @@
 :root {
   --dark: #21222c;
+  --main: #62a9cd;
+  --green: #d1d563;
+}
+
+#root {
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  flex-flow: column;
+  box-sizing: border-box;
 }
 
 header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 10px;
   background-color: var(--dark);
   color: white;
+}
+
+main {
+  overflow: auto;
 }
 
 li.sesion {
   display: flex;
   flex-flow: row nowrap;
   margin-bottom: 50px;
-  color: #666666;
+  color: #aaaaaa;
 }
 .sesion-name {
-  font-size: 25px;
+  font-size: 32px;
   font-weight: 500;
-  color: #62a9cd;
 }
+.sesion-name.active {
+  color: #8ccbdb;
+}
+
 .today {
   font-size: 20px;
   font-weight: 600;
@@ -45,7 +63,6 @@ li.lap {
   min-height: 50px;
   flex: 1;
   overflow: auto;
-  max-height: 50px;
   font-size: 13px;
 }
 
@@ -57,7 +74,7 @@ li.lap {
   min-width: 80%;
   height: 50px;
   outline: none;
-  border: solid 1px #62a9cd;
+  border: solid 1px var(--main);
   border-radius: 5px;
   margin-bottom: 15px;
   padding: 10px;
@@ -65,20 +82,23 @@ li.lap {
 
 button.addSession {
   cursor: pointer;
-  display: block;
-  background-color: #54aebb;
+  background-color: var(--dark);
   outline: none;
-  border: 0;
-  padding: 10px;
+  border: solid 1px var(--main);
+  padding: 5px 10px;
   color: white;
   font-size: 15px;
-  font-weight: 700;
   border-radius: 4px;
   margin: 20px 0;
+  user-select: none;
+  display: flex;
+  justify-content: space-between;
+  width: 140px;
+  align-items: baseline;
 }
 
 .sesion-horas {
-  font-size: 12px;
+  font-size: 15px;
   width: 125px;
   display: inline;
   margin-left: 15px;
@@ -96,13 +116,13 @@ button.addSession {
 }
 
 .session-description {
-  min-width: 180px;
-  max-width: 180px;
+  min-width: 210px;
+  max-width: 210px;
   border-right: solid 3px #d8d8d8;
 }
 
 ul.sesionList {
-  padding-left: 15px;
+  padding-left: 25px;
 }
 
 .session-laps ul {
@@ -113,7 +133,7 @@ section.session-laps {
   flex: 1 1 auto;
   display: flex;
   flex-flow: column nowrap;
-  padding: 0 20px;
+  padding: 0 40px;
 }
 
 .newLapContainer {
@@ -130,7 +150,35 @@ section.session-laps {
   position: absolute;
   right: -10px;
   bottom: 0;
-  background-color: #d1d563;
+  background-color: var(--green);
   font-size: 25px;
   cursor: pointer;
+}
+
+section.HorasHoy {
+  background-color: #f3f9fb;
+  width: 90px;
+  height: 80px;
+  border-top: solid 5px var(--green);
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+section.HorasHoy > span:first-child{
+  margin-top: 10px;
+  color: #333;
+  font-size: 18px;
+}
+
+section.HorasHoy > div{
+  margin-top: 10px;
+  color: var(--main);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+section.HorasHoy > div > span{
+  margin-right: 5px;
+  font-size: 22px;
 }
