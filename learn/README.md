@@ -2,6 +2,19 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Concept
+This page is made to practice my React learning process.
+It's difficul for me complete session of study without distractions like cellphone, notifications or even thougts about things that I have to do. It's quite difficult mantain focus on follow one subject because there are many technologies that I don't know, and there is not an specific path to learn some programing technologies. 
+
+
+I usually write notes or quotes about that I'm learning to try to understand better. 
+
+For those reasons I made `Procastinator` it helps to me to follow my process, it saves my notes, and I can watch my current progress. I would like to improve this application to help other persons to complete many courses that they stack like trophies or old books that some day will be read
+
+Not say: Today is the day for `start` a course, contrary say today is the day to `complete` this course
+
+
+
 ## Available Scripts
 
 In the project directory, you can run:
