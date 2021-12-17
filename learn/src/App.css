@@ -29,7 +29,7 @@ li.sesion {
   display: flex;
   flex-flow: row nowrap;
   margin-bottom: 50px;
-  color: #aaaaaa;
+  color: #525252;
 }
 .sesion-name {
   font-size: 32px;

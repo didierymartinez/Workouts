@@ -12,9 +12,9 @@ const SelectorDay = () => {
 
     return (
         <section className="SelectorDay">
-            <button onClick={prevDay}><Arrow left={true}></Arrow></button>
+            <button aria-label="previous" onClick={prevDay}><Arrow left={true}></Arrow></button>
             <Today value={currentDay}></Today>
-            <button onClick={nextDay}><Arrow></Arrow></button>
+            <button aria-label="next" onClick={nextDay}><Arrow></Arrow></button>
         </section>
     );
 }
