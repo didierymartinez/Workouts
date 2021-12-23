@@ -56,7 +56,7 @@ li.lap {
   color: #62a9cd;
 }
 
-.lap p {
+.lap div {
   margin: 0;
   background-color: #f3f9fb;
   padding: 10px;
@@ -64,6 +64,10 @@ li.lap {
   flex: 1;
   overflow: auto;
   font-size: 13px;
+}
+
+.lap div strong {
+  font-size: 15px;
 }
 
 .laps-list {

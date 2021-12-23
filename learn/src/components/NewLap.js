@@ -1,4 +1,5 @@
-import React, { useContext, useRef } from "react";
+import React, { useContext, useRef, useState } from "react";
+import uuid from 'react-uuid';
 import ActivitiesContext from "../store/activities-context";
 
 const NewLap = () => {
@@ -8,7 +9,7 @@ const NewLap = () => {
   const saveLap = (e) => {
     e.preventDefault();
     if (inputTxt.current.value) {
-      addLap({ start: new Date(), resume: inputTxt.current.value });
+      addLap({ id: uuid(), start: new Date(), resume: inputTxt.current.value });
       inputTxt.current.value = "";
     }
   };

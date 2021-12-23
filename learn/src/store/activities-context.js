@@ -1,5 +1,22 @@
 import React, { useState, useEffect } from "react";
 
+
+const saveKeyWords = (lap) => {
+  const glosary = JSON.parse( localStorage.getItem('glosary') || '{}');
+  const keyWords = lap.resume.match(/\.#[\w\d\s]*#\./ig);
+  if(keyWords){
+    keyWords.forEach((word) => {
+      const realWord = word.replaceAll('#','').toLowerCase();
+      if(!glosary[realWord]){
+        glosary[realWord] = { laps: [] };
+      }
+      glosary[realWord].laps.push(lap.id);
+    });
+    
+    localStorage.setItem('glosary', JSON.stringify(glosary));
+  }
+}
+
 const ActivitiesContext = React.createContext({
   sesionsList: [],
   addSession: () => {},
@@ -96,12 +113,14 @@ export const ActivitiesContextProvider = (props) => {
   };
 
   const addLap = (lap) => {
+    saveKeyWords(lap);
     setSesionsList((prev) => {
       const modif = JSON.parse(JSON.stringify(prev));
       modif[0].laps.unshift(lap);
       return modif;
     });
   };
+
 
   return (
     <ActivitiesContext.Provider
