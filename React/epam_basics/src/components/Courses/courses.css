@@ -1,0 +1,12 @@
+.search-bar-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.courses-container{
+    padding: 20px;
+}
+
+.courses-container{
+    border: solid;
+}

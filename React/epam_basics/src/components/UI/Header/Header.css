@@ -1,0 +1,17 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    border-bottom: solid 1px silver;
+    padding: 0 10px;
+}
+
+.loginInfo-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.loginInfo-container button{
+    margin-left: 20px;
+}

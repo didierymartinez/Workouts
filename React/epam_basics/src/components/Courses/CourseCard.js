@@ -6,7 +6,7 @@ const CourseCard = (props) => {
 	const date = props.date.replaceAll('/', '.');
 
 	return (
-		<>
+		<div className='course-card'>
 			<section>
 				<h1>{props.title}</h1>
 				<p>{props.description}</p>
@@ -17,7 +17,7 @@ const CourseCard = (props) => {
 				Created: {date}
 				<Button text='Show course'></Button>
 			</section>
-		</>
+		</div>
 	);
 };
 export default CourseCard;

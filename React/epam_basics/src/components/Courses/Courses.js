@@ -1,10 +1,14 @@
+import { useState } from 'react';
+import uuid from 'react-uuid';
+
 import Button from '../UI/Button';
 import CourseCard from './CourseCard';
-import { mockedAuthorsList, mockedCoursesList } from '../../mockData';
 import SearchBar from '../UI/SearchBar';
-import { useState } from 'react';
 import CreateCourse from './CreateCourse/CreateCourse';
-import uuid from 'react-uuid';
+
+import { mockedAuthorsList, mockedCoursesList } from '../../mockData';
+
+import './courses.css';
 
 const Courses = () => {
 	const [coursesList, setCoursesList] = useState(mockedCoursesList);
@@ -43,17 +47,13 @@ const Courses = () => {
 
 	return (
 		<>
-			<SearchBar onClick={searchBar}></SearchBar>
-			{showAddCourseForm && (
-				<CreateCourse
-					authors={authorsList}
-					onCreateAuthor={createAuthorHandler}
-					onCreateCourse={createCourseHandler}
-				></CreateCourse>
-			)}
 			{!showAddCourseForm && (
-				<section>
-					<Button text='Add new course' onClick={addNewCourse}></Button>
+				<section className='courses-container'>
+					<section className='search-bar-container'>
+						<SearchBar onClick={searchBar}></SearchBar>
+						<Button text='Add new course' onClick={addNewCourse}></Button>
+					</section>
+
 					{coursesList.map((course, key) => {
 						return (
 							<CourseCard
@@ -67,6 +67,13 @@ const Courses = () => {
 						);
 					})}
 				</section>
+			)}
+			{showAddCourseForm && (
+				<CreateCourse
+					authors={authorsList}
+					onCreateAuthor={createAuthorHandler}
+					onCreateCourse={createCourseHandler}
+				></CreateCourse>
 			)}
 		</>
 	);

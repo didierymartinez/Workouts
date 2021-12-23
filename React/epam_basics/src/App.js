@@ -1,5 +1,6 @@
 import Courses from './components/Courses/Courses';
-import Header from './components/Header/Header';
+import Header from './components/UI/Header/Header';
+import './App.css';
 
 function App() {
 	return (
