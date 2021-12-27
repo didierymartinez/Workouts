@@ -1,4 +1,4 @@
-import React, { useContext, useRef, useState } from "react";
+import React, { useContext, useRef } from "react";
 import uuid from 'react-uuid';
 import ActivitiesContext from "../store/activities-context";
 
@@ -22,7 +22,7 @@ const NewLap = () => {
 
   return (
     <section className="newLapContainer">
-      <textarea ref={inputTxt} className="newLap" onKeyDown={addlap}></textarea>
+      <div contentEditable ref={inputTxt} className="newLap" onKeyDown={addlap}></div>
       <button onClick={saveLap}>+</button>
     </section>
   );
