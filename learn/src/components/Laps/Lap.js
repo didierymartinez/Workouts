@@ -1,5 +1,5 @@
 import React from "react";
-import Hour from "./Helpers/Hour";
+import Hour from "../Helpers/Hour";
 import ReactHtmlParser from 'react-html-parser'
 
 const Lap = (props) => {

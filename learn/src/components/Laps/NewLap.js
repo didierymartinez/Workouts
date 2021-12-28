@@ -1,6 +1,6 @@
 import React, { useContext, useRef } from "react";
 import uuid from 'react-uuid';
-import ActivitiesContext from "../store/activities-context";
+import ActivitiesContext from "../../store/activities-context";
 
 const NewLap = () => {
   const { addLap } = useContext(ActivitiesContext);

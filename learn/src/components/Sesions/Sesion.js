@@ -1,6 +1,6 @@
 import React from "react";
-import LapsList from "./LapsList";
-import Hour from "./Helpers/Hour";
+import LapsList from "../Laps/LapsList";
+import Hour from "../Helpers/Hour";
 
 const Sesion = ({ name, start, end, laps }) => {
 

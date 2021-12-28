@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
-import ActivitiesContext from "../store/activities-context"
-import Today from "./Helpers/Today"
+import ActivitiesContext from "../../../store/activities-context"
+import Today from "../../Helpers/Today"
 
 import "./SelectorDay.css"
-import Arrow from "./UI/Arrow";
+import Arrow from "../Arrow";
 
 
 const SelectorDay = () => {

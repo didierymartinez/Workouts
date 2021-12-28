@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
-import SesionList from "./components/SesionsList";
+import SesionList from "./components/Sesions/SesionsList";
 import ActivitiesContext from "./store/activities-context";
-import SelectorDay from "./components/SelectorDay";
+import SelectorDay from "./components/UI/SelectorDay/SelectorDay";
 import Play from "./components/UI/Play";
 
 import "./App.css";
