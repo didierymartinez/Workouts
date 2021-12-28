@@ -6,7 +6,7 @@ const saveKeyWords = (lap) => {
   const keyWords = lap.resume.match(/\.#[\w\d\s]*#\./ig);
   if(keyWords){
     keyWords.forEach((word) => {
-      const realWord = word.replaceAll('#','').toLowerCase();
+      const realWord = word.replaceAll(/(\.#)|(#\.)/ig,'').toLowerCase();
       if(!glosary[realWord]){
         glosary[realWord] = { laps: [] };
       }

@@ -22,7 +22,7 @@ const NewLap = () => {
 
   return (
     <section className="newLapContainer">
-      <div contentEditable ref={inputTxt} className="newLap" onKeyDown={addlap}></div>
+      <textarea ref={inputTxt} className="newLap" onKeyDown={addlap}></textarea>
       <button onClick={saveLap}>+</button>
     </section>
   );
