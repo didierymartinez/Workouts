@@ -29,22 +29,22 @@ test("render selector day", () => {
   expect(sel).toBeInTheDocument();
 });
 
-test("previous day", () => {
+test("previous day", async () => {
   render(<SelectorDay></SelectorDay>);
 
   const btnPrev = screen.getByRole('button', { name: /previous/ig});
-  fireEvent.click(btnNext);
-  const btnPrev = `${day-1} ${month} ${year}`
-  const sel = screen.findAllByText(new RegExp(txtDate, 'ig'));
+  fireEvent.click(btnPrev);
+  const txtDate = `${day-1} ${month} ${year}`
+  await screen.findAllByText(new RegExp(txtDate, 'ig'));
 
 })
 
-test("next day", () => {
+test("next day", async () => {
   render(<SelectorDay></SelectorDay>);
 
   const btnNext = screen.getByRole('button', { name: /last/ig});
   fireEvent.click(btnNext);
   const txtDate = `${day+1} ${month} ${year}`
-  const sel = screen.findAllByText(new RegExp(txtDate, 'ig'));
+  await screen.findAllByText(new RegExp(txtDate, 'ig'));
 
 })
