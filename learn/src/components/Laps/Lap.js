@@ -1,6 +1,7 @@
 import React from "react";
 import Hour from "../Helpers/Hour";
 import ReactHtmlParser from 'react-html-parser'
+import './Lap.css'
 
 const Lap = (props) => {
 
