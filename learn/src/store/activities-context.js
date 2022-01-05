@@ -66,19 +66,11 @@ export const ActivitiesContextProvider = (props) => {
     const sesions = JSON.parse(localStorage.getItem(keyLocalStorage)) || [];
     setSesionsList(sesions);
   }, [keyLocalStorage]);
-
+  
   useEffect(() => {
-    if (sesionsList.length === 0) {
-      return;
-    }
     setTotalHours(sumHours(sesionsList));
-    localStorage.setItem(keyLocalStorage, JSON.stringify(sesionsList));
   }, [sesionsList, keyLocalStorage]);
 
-  useEffect(() => {
-    const sesions = JSON.parse(localStorage.getItem(keyLocalStorage)) || [];
-    setSesionsList(sesions);
-  }, [keyLocalStorage]);
 
   const nextDay = () => {
     setKeyLocalStorage(addDay(keyLocalStorage, 1));
