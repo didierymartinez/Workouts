@@ -6,7 +6,7 @@ export const StatsPreview = () => {
   return (
     <div className="w-full h-screen flex flex-col justify-center items-center bg-[#0A0C1B] text-gray-100 tracking-wider">
       <main className="w-[330px] h-[780px] lg:w-[1110px] lg:h-[446px] flex flex-col lg:flex-row-reverse bg-[#1C1938] rounded-xl">
-        <section className="bg-container flex-1 rounded-t-xl lg:rounded-r-xl lg:rounded-tl-none max-h-60 ">
+        <section className="bg-container flex-1 rounded-t-xl lg:rounded-r-xl lg:rounded-tl-none max-h-60 lg:max-h-max ">
           
         </section>
         <section className="flex flex-col items-center text-center lg:text-left lg:items-start justify-between flex-1 p-6 lg:p-14">
