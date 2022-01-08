@@ -1,0 +1,17 @@
+*{
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+.mainCont{
+    background-color:  #e4eafa;
+    background-image: url('./images/pattern-background-desktop.svg');
+    background-repeat: no-repeat;
+}
+
+@media (max-width: 355px) {
+    
+    .mainCont{
+        background-image: url('./images/pattern-background-mobile.svg');
+    }
+
+}
