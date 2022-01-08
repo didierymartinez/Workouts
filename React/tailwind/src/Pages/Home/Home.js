@@ -13,6 +13,9 @@ export const Home = () => {
             <Link to="/ordersumary">Order Summary</Link>
           </li>
           <li>
+            <Link to="/statspreview">Stats Preview</Link>
+          </li>
+          <li>
             <Link to="/articlePrev">Article Preview</Link>
           </li>
         </ul>

@@ -9,6 +9,7 @@ import {
   Link
 } from "react-router-dom";
 import { Home } from "./Pages/Home/Home";
+import { StatsPreview } from "./Pages/statsPreview/StatsPreview";
 
 
 export default function App() {
@@ -22,6 +23,7 @@ export default function App() {
           <Route exact path="/articlePrev" element={<ArticlePreview />}/>
           <Route exact path="/ntf" element={<NtfPreviewCard />}/>
           <Route exact path="/ordersumary" element={<OrderSummary />}/>
+          <Route exact path="/statspreview" element={<StatsPreview />}/>
       </Routes>
     </Router>
   );
