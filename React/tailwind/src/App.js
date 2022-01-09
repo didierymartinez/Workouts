@@ -10,6 +10,7 @@ import {
 } from "react-router-dom";
 import { Home } from "./Pages/Home/Home";
 import { StatsPreview } from "./Pages/statsPreview/StatsPreview";
+import { ColumnsPreview } from "./Pages/Columns/ColumnsPreview";
 
 
 export default function App() {
@@ -24,6 +25,7 @@ export default function App() {
           <Route exact path="/ntf" element={<NtfPreviewCard />}/>
           <Route exact path="/ordersumary" element={<OrderSummary />}/>
           <Route exact path="/statspreview" element={<StatsPreview />}/>
+          <Route exact path="/columnspreview" element={<ColumnsPreview />}/>
       </Routes>
     </Router>
   );

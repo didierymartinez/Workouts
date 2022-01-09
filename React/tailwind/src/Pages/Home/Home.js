@@ -16,6 +16,11 @@ export const Home = () => {
             <Link to="/statspreview">Stats Preview</Link>
           </li>
           <li>
+            <Link to="/columnspreview">3 Columns preview</Link>
+          </li>
+
+
+          <li>
             <Link to="/articlePrev">Article Preview</Link>
           </li>
         </ul>

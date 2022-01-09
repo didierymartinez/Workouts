@@ -3,11 +3,11 @@ import imghero from "./images/illustration-hero.svg";
 import iconmusic from "./images/icon-music.svg";
 
 import "./styles.css";
+import { SimpleLayout } from "../../Components/SimpleLayout";
 
 export const OrderSummary = () => {
   return (
-    <div className="mainCont h-screen w-full flex justify-center items-center">
-      <main className="flex flex-col w-[450px] h-[700px] rounded-xl bg-white">
+    <SimpleLayout mainclass="mainCont" classes="font-['Red Hat Display'] flex flex-col w-[450px] h-[700px] rounded-xl bg-white">
         <img src={imghero} alt="" className="rounded-t-xl" />
         <section className="flex flex-col items-center p-11 justify-between flex-1">
           <h1 className="text-3xl font-bold">Order Summary</h1>
@@ -33,7 +33,6 @@ export const OrderSummary = () => {
           </button>
           <button className="hover:font-bold">Cancel order</button>
         </section>
-      </main>
-    </div>
+    </SimpleLayout>
   );
 };
