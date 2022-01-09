@@ -11,6 +11,7 @@ import {
 import { Home } from "./Pages/Home/Home";
 import { StatsPreview } from "./Pages/statsPreview/StatsPreview";
 import { ColumnsPreview } from "./Pages/Columns/ColumnsPreview";
+import { ProfileCard } from "./Pages/ProfileCard/ProfileCard";
 
 
 export default function App() {
@@ -26,6 +27,7 @@ export default function App() {
           <Route exact path="/ordersumary" element={<OrderSummary />}/>
           <Route exact path="/statspreview" element={<StatsPreview />}/>
           <Route exact path="/columnspreview" element={<ColumnsPreview />}/>
+          <Route exact path="/profilecard" element={<ProfileCard />}/>
       </Routes>
     </Router>
   );

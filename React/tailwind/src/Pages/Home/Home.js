@@ -18,6 +18,9 @@ export const Home = () => {
           <li>
             <Link to="/columnspreview">3 Columns preview</Link>
           </li>
+          <li>
+            <Link to="/profilecard">Profile card</Link>
+          </li>
 
 
           <li>

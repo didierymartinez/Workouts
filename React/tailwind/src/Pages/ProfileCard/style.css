@@ -1,0 +1,5 @@
+.background-profilecard{
+    background-image: url('./images/bg-pattern-bottom.svg'), url('./images/bg-pattern-top.svg');
+    background-repeat: no-repeat;
+    background-position: 145% -150%, -60% 200%;
+}
