@@ -1,0 +1,16 @@
+.bgImagen{
+    background-image: url('./images/bg-pattern-desktop.svg');
+    background-repeat: no-repeat;
+    background-position-x: 115%;
+    background-position-y: 76%;
+}
+
+@media (max-width: 600px) {
+    .bgImagen{
+        background-image: url('./images/bg-pattern-mobile.svg');
+        background-repeat: no-repeat;
+        background-position-x: 50%;
+        background-position-y: 15%;
+    }
+    
+  }

@@ -12,6 +12,7 @@ import { Home } from "./Pages/Home/Home";
 import { StatsPreview } from "./Pages/statsPreview/StatsPreview";
 import { ColumnsPreview } from "./Pages/Columns/ColumnsPreview";
 import { ProfileCard } from "./Pages/ProfileCard/ProfileCard";
+import { FaqAccordion } from "./Pages/FaqAccordion/FaqAccordion";
 
 
 export default function App() {
@@ -28,6 +29,7 @@ export default function App() {
           <Route exact path="/statspreview" element={<StatsPreview />}/>
           <Route exact path="/columnspreview" element={<ColumnsPreview />}/>
           <Route exact path="/profilecard" element={<ProfileCard />}/>
+          <Route exact path="/faqaccordion" element={<FaqAccordion />}/>
       </Routes>
     </Router>
   );

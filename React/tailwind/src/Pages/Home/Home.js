@@ -21,6 +21,9 @@ export const Home = () => {
           <li>
             <Link to="/profilecard">Profile card</Link>
           </li>
+          <li>
+            <Link to="/faqaccordion">Faq Accordion</Link>
+          </li>
 
 
           <li>
