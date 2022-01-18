@@ -24,6 +24,9 @@ export const Home = () => {
           <li>
             <Link to="/faqaccordion">Faq Accordion</Link>
           </li>
+          <li>
+            <Link to="/socialproof">Social Proof</Link>
+          </li>
 
 
           <li>

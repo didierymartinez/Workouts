@@ -13,6 +13,7 @@ import { StatsPreview } from "./Pages/statsPreview/StatsPreview";
 import { ColumnsPreview } from "./Pages/Columns/ColumnsPreview";
 import { ProfileCard } from "./Pages/ProfileCard/ProfileCard";
 import { FaqAccordion } from "./Pages/FaqAccordion/FaqAccordion";
+import { SocialProof } from "./Pages/SocialProof/SocialProof";
 
 
 export default function App() {
@@ -30,6 +31,7 @@ export default function App() {
           <Route exact path="/columnspreview" element={<ColumnsPreview />}/>
           <Route exact path="/profilecard" element={<ProfileCard />}/>
           <Route exact path="/faqaccordion" element={<FaqAccordion />}/>
+          <Route exact path="/socialproof" element={<SocialProof />}/>
       </Routes>
     </Router>
   );

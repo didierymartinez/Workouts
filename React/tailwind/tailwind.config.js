@@ -10,7 +10,8 @@ module.exports = {
       'kumbh':['Kumbh Sans'],
       'lexend':['Lexend Deca'],
       'outfit':['Outfit'],
-      'rethat':['Red Hat Display']
+      'rethat':['Red Hat Display'],
+      'spartan':['Spartan']
     },
     extend: {},
   },
