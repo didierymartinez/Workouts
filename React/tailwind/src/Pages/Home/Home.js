@@ -27,10 +27,14 @@ export const Home = () => {
           <li>
             <Link to="/socialproof">Social Proof</Link>
           </li>
-
-
           <li>
             <Link to="/articlePrev">Article Preview</Link>
+          </li>
+          <li>
+            <Link to="/countries">Countries</Link>
+          </li>
+          <li>
+            <Link to="/fourcards">Four Cards</Link>
           </li>
         </ul>
       </nav>

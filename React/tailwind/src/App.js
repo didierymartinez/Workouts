@@ -14,6 +14,8 @@ import { ColumnsPreview } from "./Pages/Columns/ColumnsPreview";
 import { ProfileCard } from "./Pages/ProfileCard/ProfileCard";
 import { FaqAccordion } from "./Pages/FaqAccordion/FaqAccordion";
 import { SocialProof } from "./Pages/SocialProof/SocialProof";
+import { Countries } from "./Pages/Countries/Countries";
+import { FourCards } from "./Pages/FourCards/FourCards";
 
 
 export default function App() {
@@ -32,6 +34,8 @@ export default function App() {
           <Route exact path="/profilecard" element={<ProfileCard />}/>
           <Route exact path="/faqaccordion" element={<FaqAccordion />}/>
           <Route exact path="/socialproof" element={<SocialProof />}/>
+          <Route exact path="/countries" element={<Countries />}/>
+          <Route exact path="/fourcards" element={<FourCards />}/>
       </Routes>
     </Router>
   );

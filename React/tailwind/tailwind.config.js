@@ -11,7 +11,8 @@ module.exports = {
       'lexend':['Lexend Deca'],
       'outfit':['Outfit'],
       'rethat':['Red Hat Display'],
-      'spartan':['Spartan']
+      'spartan':['Spartan'],
+      'poppins':['Poppins']
     },
     extend: {},
   },
