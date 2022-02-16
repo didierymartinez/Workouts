@@ -16,6 +16,7 @@ import { FaqAccordion } from "./Pages/FaqAccordion/FaqAccordion";
 import { SocialProof } from "./Pages/SocialProof/SocialProof";
 import { Countries } from "./Pages/Countries/Countries";
 import { FourCards } from "./Pages/FourCards/FourCards";
+import { ComingSoon } from "./Pages/ComingSoon/ComingSoon";
 
 
 export default function App() {
@@ -36,6 +37,7 @@ export default function App() {
           <Route exact path="/socialproof" element={<SocialProof />}/>
           <Route exact path="/countries" element={<Countries />}/>
           <Route exact path="/fourcards" element={<FourCards />}/>
+          <Route exact path="/comingsoon" element={<ComingSoon />}/>
       </Routes>
     </Router>
   );

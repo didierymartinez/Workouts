@@ -1,0 +1,18 @@
+.commingsoon > aside:first-child{
+    background-image: url('./images/bg-pattern-desktop.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+ .commingsoon > aside:nth-child(2){
+    background-color:  #e4eafa;
+    background-image: url('./images/hero-desktop.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+} 
+
+@media (max-width: 600px) {
+    
+
+
+}

@@ -12,7 +12,8 @@ module.exports = {
       'outfit':['Outfit'],
       'rethat':['Red Hat Display'],
       'spartan':['Spartan'],
-      'poppins':['Poppins']
+      'poppins':['Poppins'],
+      'josefin': ['Josefin Sans'],
     },
     extend: {},
   },

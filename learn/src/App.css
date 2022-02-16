@@ -179,3 +179,12 @@ section.HorasHoy > div > span{
   font-size: 22px;
 }
 
+
+.container{
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.container{
+  flex-flow: column wrap;
+}

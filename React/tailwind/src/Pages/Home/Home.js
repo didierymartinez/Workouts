@@ -36,6 +36,9 @@ export const Home = () => {
           <li>
             <Link to="/fourcards">Four Cards</Link>
           </li>
+          <li>
+            <Link to="/comingsoon">Coming Soon</Link>
+          </li>
         </ul>
       </nav>
     </div>
